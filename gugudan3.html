@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 객체 활용해 구구단 다시 구현 </h2>
+
+    <script>
+        gugudan = {};
+        gugudan.result = [];
+        gugudan.now = 0;
+
+        gugudan.calculate = function(num){
+            this.now = num;
+
+            document.write("<h2>"+this.now+"단</h2>");
+            
+            for(var i=0; i<9;i++){
+                this.result[i] = num * (i+1);
+            }
+
+            gugudan.print();
+        }
+
+        gugudan.print = function(){
+            for(var i=0;i<9;i++){
+                document.write(this.now + " * " + (i+1) + " = " + this.result[i] + "<br>");
+            }
+        }
+
+        gugudan.main = function(){
+            console.log("main이 실행되었습니다.");
+
+            for(var i=2;i<=9;i++){
+                gugudan.calculate(i);
+            }
+        }
+
+        gugudan.main();
+    </script>
+</body>
+</html>
