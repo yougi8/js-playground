@@ -1,0 +1,25 @@
+<!-- 1.구구단 준비하기 - 연습문제1.2 BMI를 계산하는 프로그램 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 연습문제 1-2 </h2>
+
+    <script>
+        var input1 = prompt("몸무게를 입력해주세요. (kg) ");
+        var input2 = prompt("키를 입력해주세요. (cm) ");
+
+        var weight = Number(input1);
+        var height = Number(input2) / 100;
+
+        var bmi = weight / (height * height);
+
+        console.log("당신의 bmi는 "+ bmi + " 입니다.");
+    </script>
+</body>
+</html>
