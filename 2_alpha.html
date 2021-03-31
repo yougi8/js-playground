@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[실습] 구구단 구현하기 2 - 추가 미션 및 마무리하기</title>
+</head>
+<body>
+    <h2> 구구단 구현하기 2 - 추가 미션 및 마무리하기 </h2>
+    <p> 사용자가 입력한 값에 따라 크기가 다른 구구단을 계산해 출력한다. </p>
+
+    <script>
+        var input = input = prompt("구구단을 진행할 문자를 입력하세요 (ex. 8,7)");
+
+        var last1 = Number(input.substring(0,1));
+        var last2 = Number(input.substring(2,3));
+
+        for(var i=2; i<=last1; i++){
+            document.write("<h3>"+i+"단 </h3>")
+            for(var j=1;j<=9;j++){
+                document.write(i+" * "+j+" = "+(i*j)+"<br>");
+                if(i === last1 && j === last2){
+                    break;
+                }
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>
